@@ -7,12 +7,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc --project ./tsconfig.prod.json && tsc --project ./tsconfig.test.json",
-    "lint": "eslint . --ext ts,js,json",
-    "lint:fix": "yarn lint --fix",
-    "test": "yarn build && node test/index.js",
-    "test:browser": "yarn build && airtap test/index.js",
-    "prepublishOnly": "yarn build"
+    "build": "npx tsc --project ./tsconfig.prod.json && npx tsc --project ./tsconfig.test.json",
+    "lint": "npx eslint . --ext ts,js,json",
+    "lint:fix": "npm run-scipt lint --fix",
+    "test": "npm run-script build && node test/index.js",
+    "test:browser": "npm run-script build && airtap test/index.js",
+    "prepublishOnly": "npm run-script build"
   },
   "repository": {
     "type": "git",
